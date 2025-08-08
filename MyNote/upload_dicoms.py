@@ -34,7 +34,7 @@ docker rm -f ohif_tmp
 docker stop orthanc
 docker rm orthanc
 
-curl -u orthanc:orthanc http://172.28.119.119:8042/dicom-web/studies
+curl -u PatriciaXiao:patxiao2025 http://172.28.119.119:8042/dicom-web/studies
 
 docker run -d \
   --name ohif \
