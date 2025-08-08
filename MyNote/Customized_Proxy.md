@@ -119,6 +119,15 @@ docker run --rm --add-host=host.docker.internal:host-gateway curlimages/curl \
   curl -i http://172.28.119.119:8043/dicom-web/studies
 ```
 
+```bash
+docker run -d \
+  --name ohif \
+  -p 3000:80 \
+  --add-host=host.docker.internal:host-gateway \
+  -e "VITE_DICOMWEB_SERVER=http://172.28.119.119:8043/dicom-web" \
+  ohif/viewer
+```
+
 ---
 
 ## 6. Open OHIF Viewer
