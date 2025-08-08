@@ -45,7 +45,7 @@ window.config = {
           // prefixWith: '/orthanc/',
         },
         requestOptions: {
-          auth: 'orthanc:orthanc',
+          auth: 'PatriciaXiao:patxiao2025',
         },
       },
     },
