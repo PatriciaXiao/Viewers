@@ -111,16 +111,6 @@
   // Explorer will not be available.
   "HttpServerEnabled" : true,
 
-  // add this to enable cors
-  "HttpServer": {
-    "EnableCors": true,
-    "CorsAllowedOrigins": [
-      "http://host.docker.internal:3000",
-      "http://localhost:3000",
-      "http://172.28.119.119:3000"
-    ]
-  },
-
   // Enable/disable the Orthanc Explorer Web user interface. This
   // option is only meaningful if the "HttpServerEnabled" option is
   // set to "true" (new in Orthanc 1.8.2).
@@ -319,8 +309,7 @@
   // The list of the registered users. Because Orthanc uses HTTP
   // Basic Authentication, the passwords are stored as plain text.
   "RegisteredUsers" : {
-    "debug" : "helloworld",
-    "PatriciaXiao": "patxiao2025"
+    // "alice" : "alicePassword"
   },
 
 
