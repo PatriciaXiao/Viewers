@@ -33,7 +33,7 @@ docker run -d \
   --name ohif \
   -p 3000:80 \
   --add-host=host.docker.internal:host-gateway \
-  -v /home/patxiao/Viewers/MyNote/config.json:/usr/share/nginx/html/config/default.js:ro \
+  -v /home/patxiao/Viewers/MyNote/config/default.js:/usr/share/nginx/html/config/default.js:ro \
   ohif/viewer
 
 docker rm -f ohif
