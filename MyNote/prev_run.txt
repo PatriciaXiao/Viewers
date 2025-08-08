@@ -20,3 +20,10 @@ docker run -d \
 
 
 docker exec -it orthanc cat /etc/orthanc/orthanc.json
+
+
+docker run -d \
+  --name orthanc-nginx-proxy \
+  -p 8043:8043 \
+  -v /home/patxiao/Viewers/MyNote/config/nginx_proxy.conf:/etc/nginx/nginx.conf:ro \
+  nginx
