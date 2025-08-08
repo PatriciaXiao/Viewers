@@ -21,6 +21,7 @@ window.config = {
         wadoUriRoot: 'http://host.docker.internal:8042/dicom-web',
         qidoRoot: 'http://host.docker.internal:8042/dicom-web',
         wadoRoot: 'http://host.docker.internal:8042/dicom-web',
+        authorization: 'Basic ' + btoa('PatriciaXiao:patxiao2025'),
         qidoSupportsIncludeField: true,
         supportsReject: true,
         dicomUploadEnabled: true,
