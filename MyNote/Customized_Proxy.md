@@ -128,6 +128,15 @@ docker run -d \
   ohif/viewer
 ```
 
+```bash
+docker run -d \
+  --name ohif \
+  -p 3000:80 \
+  --add-host=host.docker.internal:host-gateway \
+  -v /home/patxiao/Viewers/MyNote/config/local_orthanc_proxy.js:/usr/share/nginx/html/config/default.js:ro \
+  ohif/viewer
+```
+
 ---
 
 ## 6. Open OHIF Viewer
