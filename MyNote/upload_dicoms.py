@@ -57,6 +57,8 @@ docker run -d \
 
 docker rm -f ohif
 
+docker logs orthanc
+
 
 docker run -d \
   --name orthanc \
