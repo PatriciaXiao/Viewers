@@ -1,0 +1,13 @@
+{
+  "Name": "Orthanc",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "DicomModalities": {},
+  "HttpServer": {
+    "EnableCors": true,
+    "CorsAllowedOrigins": [
+      "http://host.docker.internal:3000",
+      "http://localhost:3000",
+      "http://172.28.119.119:3000"
+    ]
+  }
+}

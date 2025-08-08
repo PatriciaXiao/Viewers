@@ -48,4 +48,14 @@ docker run -d \
 
 docker rm -f ohif
 
+
+docker run -d \
+  --name orthanc \
+  -p 8042:8042 -p 4242:4242 \
+  -v /home/patxiao/MRI_spine_sample:/dicom:ro \
+  -v /home/patxiao/orthanc_config/Orthanc.json:/etc/orthanc/Orthanc.json:ro \
+  jodogne/orthanc-plugins
+
+  
+
 """
