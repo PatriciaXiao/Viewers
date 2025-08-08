@@ -3,7 +3,8 @@ import os
 from pyorthanc import Orthanc, upload
 
 # ==== CONFIGURATION ====
-DICOM_DIR = "/Users/patriciaxiao/Documents/GitHub/Viewers/MRI_spine_sample"
+#DICOM_DIR = "/Users/patriciaxiao/Documents/GitHub/Viewers/MRI_spine_sample"
+DICOM_DIR = "/home/patxiao/MRI_spine_sample"
 ORTHANC_URL = "http://localhost:8042"
 ORTHANC_USERNAME = "orthanc"  # change if needed
 ORTHANC_PASSWORD = "orthanc"  # change if needed
