@@ -25,3 +25,15 @@ for root, _, files in os.walk(DICOM_DIR):
             print(f"❌ Failed to upload {file_path}: {e}")
 
 print("🎉 Upload complete!")
+
+"""
+curl -u orthanc:orthanc http://172.28.119.119:8042/dicom-web/studies
+
+docker run -d \
+  --name ohif \
+  -p 3000:80 \
+  --add-host=host.docker.internal:host-gateway \
+  -v /home/patxiao/Viewers/MyNote/config.json:/usr/share/nginx/html/config/default.js:ro \
+  ohif/viewer
+  
+"""

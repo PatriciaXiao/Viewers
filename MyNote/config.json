@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "dicomWeb": [
+      {
+        "name": "Orthanc",
+        "wadoUriRoot": "http://host.docker.internal:8042/wado",
+        "qidoRoot": "http://host.docker.internal:8042/dicom-web",
+        "wadoRoot": "http://host.docker.internal:8042/dicom-web",
+        "qidoSupportsIncludeField": true,
+        "supportsReject": false,
+        "imageRendering": "wadors",
+        "thumbnailRendering": "wadors",
+        "requestOptions": {
+          "auth": "orthanc:orthanc"
+        }
+      }
+    ]
+  }
+}
