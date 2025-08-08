@@ -76,7 +76,7 @@ Run this Docker command to start nginx:
 docker run -d \
   --name orthanc-nginx-proxy \
   -p 8043:8043 \
-  -v /home/patxiao/nginx_orthanc_proxy.conf:/etc/nginx/nginx.conf:ro \
+  -v /home/patxiao/Viewers/MyNote/config/nginx_proxy.conf:/etc/nginx/nginx.conf:ro \
   nginx
 ```
 
