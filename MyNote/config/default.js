@@ -4,9 +4,9 @@ window.config = {
     dicomWeb: [
       {
         name: 'Orthanc',
-        wadoUriRoot: 'http://172.28.119.119:8042/dicom-web',
-        qidoRoot: 'http://172.28.119.119:8042/dicom-web',
-        wadoRoot: 'http://172.28.119.119:8042/dicom-web',
+        wadoUriRoot: 'http://host.docker.internal:8042/dicom-web',
+        qidoRoot: 'http://host.docker.internal:8042/dicom-web',
+        wadoRoot: 'http://host.docker.internal:8042/dicom-web',
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
