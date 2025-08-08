@@ -83,6 +83,8 @@ docker run -d \
 * This runs nginx with your custom config
 * Listens on port 8043 on the host
 
+Validate: check ```http://172.28.119.119:8043/dicom-web/studies```
+
 ---
 
 ## 4. Verify the proxy is working
