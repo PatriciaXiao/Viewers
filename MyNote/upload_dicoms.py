@@ -36,6 +36,8 @@ docker rm orthanc
 
 curl -u PatriciaXiao:patxiao2025 http://172.28.119.119:8042/dicom-web/studies
 
+curl -i -u PatriciaXiao:patxiao2025 http://localhost:8042/dicom-web
+
 docker run -d \
   --name ohif \
   -p 3000:80 \
