@@ -17,3 +17,6 @@ docker run -d \
   -p 3000:80 \
   -e "VITE_DICOMWEB_SERVER=http://172.28.119.119:8042/ohif" \
   ohif/viewer
+
+
+docker exec -it orthanc cat /etc/orthanc/orthanc.json
