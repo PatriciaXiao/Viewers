@@ -27,6 +27,13 @@ for root, _, files in os.walk(DICOM_DIR):
 print("🎉 Upload complete!")
 
 """
+docker ps
+docker ps -a
+docker rm -f ohif_tmp
+
+docker stop orthanc
+docker rm orthanc
+
 curl -u orthanc:orthanc http://172.28.119.119:8042/dicom-web/studies
 
 docker run -d \
@@ -56,6 +63,6 @@ docker run -d \
   -v /home/patxiao/orthanc_config/Orthanc.json:/etc/orthanc/Orthanc.json:ro \
   jodogne/orthanc-plugins
 
-  
+
 
 """
