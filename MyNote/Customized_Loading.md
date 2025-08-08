@@ -57,6 +57,32 @@ docker exec -it orthanc bash
 find /Users/patriciaxiao/Documents/GitHub/Viewers/MRI_spine_sample -type f | while read file; do curl -X POST "http://localhost:8042/instances" --data-binary @"$file" -H "Content-Type: application/dicom"; done
 ```
 
+Try this:
+
+```bash
+curl -X POST http://localhost:8042/instances \
+  --data-binary "@/Users/patriciaxiao/Documents/GitHub/Viewers/MRI_spine_sample/quick_example/SAG/16.dcm" \
+  -H "Content-Type: application/dicom"
+```
+
+Try this:
+
+```bash
+docker exec -it orthanc ls -R /dicom
+
+docker exec -it orthanc bash
+
+brew install dcmtk
+find /dicom -type f -print0 | while IFS= read -r -d '' file; do
+    storescu -v localhost 4242 "$file"
+done
+
+docker exec -it orthanc bash -c \
+'curl -X POST http://localhost:8042/instances \
+  -H "Content-Type: application/dicom" \
+  --data-binary "@/dicom/quick_example/SAG/16.dcm"'
+```
+
 This command finds all files and uploads them to Orthanc, even if they don’t have a `.dcm` extension.
 
 You can verify by visiting:
