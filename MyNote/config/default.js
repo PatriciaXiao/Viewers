@@ -12,7 +12,7 @@ window.config = {
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
         requestOptions: {
-          auth: 'orthanc:orthanc' // basic auth if enabled
+          auth: 'PatriciaXiao:patxiao2025' // basic auth if enabled
         }
       }
     ]
