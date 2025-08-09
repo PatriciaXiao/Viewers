@@ -127,6 +127,11 @@
     "Cors": {
       "Enable": true,
       "AllowOrigin": "*"
+    },
+    "MimeTypes" : {
+      ".js" : "application/javascript",
+      ".css" : "text/css",
+      ".html" : "text/html"
     }
   },
 
