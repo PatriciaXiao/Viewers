@@ -36,3 +36,10 @@ docker run -d \
   -p 8043:8043 \
   -v /home/patxiao/Viewers/MyNote/config/nginx_proxy.conf:/etc/nginx/nginx.conf:ro \
   nginx
+
+docker run -d \
+  --name ohif \
+  -p 3000:80 \
+  --add-host=host.docker.internal:host-gateway \
+  -v /home/patxiao/Viewers/MyNote/config/local_orthanc_proxy.js:/usr/share/nginx/html/config/default.js:ro \
+  ohif/viewer
