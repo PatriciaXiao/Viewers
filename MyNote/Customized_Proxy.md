@@ -124,7 +124,7 @@ docker run -d \
   --name ohif \
   -p 3000:80 \
   --add-host=host.docker.internal:host-gateway \
-  -e "VITE_DICOMWEB_SERVER=http://172.28.119.119:8043/dicom-web" \
+  -e "VITE_DICOMWEB_SERVER=http://172.28.119.119:8043/dicom-web/" \
   ohif/viewer
 ```
 

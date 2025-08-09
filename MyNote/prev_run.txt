@@ -23,6 +23,13 @@ docker exec -it orthanc cat /etc/orthanc/orthanc.json
 
 
 docker run -d \
+  --name orthanc \
+  -p 8042:8042 -p 4242:4242 \
+  -v /home/patxiao/MRI_spine_sample:/dicom:ro \
+  -v /home/patxiao/Viewers/MyNote/config/Orthanc.json:/etc/orthanc/orthanc.json:ro \
+  jodogne/orthanc-plugins
+
+docker run -d \
   --name orthanc-nginx-proxy \
   -p 8043:8043 \
   -v /home/patxiao/Viewers/MyNote/config/nginx_proxy.conf:/etc/nginx/nginx.conf:ro \

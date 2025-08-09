@@ -114,11 +114,20 @@
   // add this to enable cors
   "HttpServer": {
     "EnableCors": true,
-    "CorsAllowedOrigins": [
-      "http://host.docker.internal:3000",
-      "http://localhost:3000",
-      "http://172.28.119.119:3000"
-    ]
+    //"CorsAllowedOrigins": [
+    //  "http://host.docker.internal:3000",
+    //  "http://localhost:3000",
+    //  "http://172.28.119.119:3000"
+    //],
+    "DicomWeb": {
+      "Enable": true,
+      "Root": "/dicom-web/",
+      "AllowDelete": true
+    },
+    "Cors": {
+      "Enable": true,
+      "AllowOrigin": "*"
+    }
   },
 
   // Enable/disable the Orthanc Explorer Web user interface. This
@@ -320,7 +329,8 @@
   // Basic Authentication, the passwords are stored as plain text.
   "RegisteredUsers" : {
     "debug" : "helloworld",
-    "PatriciaXiao": "patxiao2025"
+    "PatriciaXiao": "patxiao2025",
+    "orthanc": "orthanc"
   },
 
 
