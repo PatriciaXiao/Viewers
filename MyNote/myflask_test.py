@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/<path:filename>")
 def ohif_proxy(filename):
     url = f"http://172.28.119.119:8042/{filename}"
-    r = requests.get(url, auth=('orthanc-user', 'orthanc-pass'))
+    r = requests.get(url, auth=('orthanc', 'orthanc'))
     content_type = "application/javascript" if filename.endswith(".js") else r.headers.get("Content-Type", "text/plain")
     return Response(r.content, content_type=content_type)
 
