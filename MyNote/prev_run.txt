@@ -29,6 +29,8 @@ docker run -d \
   -v /home/patxiao/Viewers/MyNote/config/Orthanc.json:/etc/orthanc/orthanc.json:ro \
   jodogne/orthanc-plugins
 
+python upload_dicoms.py
+
 docker run -d \
   --name orthanc-nginx-proxy \
   -p 8043:8043 \
